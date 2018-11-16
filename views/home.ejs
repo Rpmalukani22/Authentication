@@ -1,2 +1,9 @@
 <h1>Homepage</h1>
-<a href="/register">SignUp</a>
+<% if(currentUser) { %>
+<h1>Welcome <%= currentUser %> </h1>
+<a href="logout">logout!</a><br><br>
+<% } else { %>
+<a href="register">SignUp</a><br><br>
+<a href='login'> Login!</a><br><br>
+<% } %>
+<a href='main'>Try to enter without login !!</a><br><br>
